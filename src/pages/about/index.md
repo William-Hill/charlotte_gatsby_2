@@ -1,19 +1,25 @@
 ---
 templateKey: 'about-page'
 path: /about
-title: About our values
+title: About Charlotte
+image: /img/Dark_glamour.jpg
 ---
-### Shade-grown coffee
-Coffee is a small tree or shrub that grows in the forest understory in its wild form, and traditionally was grown commercially under other trees that provided shade. The forest-like structure of shade coffee farms provides habitat for a great number of migratory and resident species.
 
-### Single origin
-Single-origin coffee is coffee grown within a single known geographic origin. Sometimes, this is a single farm or a specific collection of beans from a single country. The name of the coffee is then usually the place it was grown to whatever degree available.
+I act. I sing. I model. I create.
 
-### Sustainable farming
-Sustainable agriculture is farming in sustainable ways based on an understanding of ecosystem services, the study of relationships between organisms and their environment. What grows where and how it is grown are a matter of choice and careful consideration for nature and communities.
+<br>
 
-### Direct sourcing
-Direct trade is a form of sourcing practiced by some coffee roasters. Advocates of direct trade practices promote direct communication and price negotiation between buyer and farmer, along with systems that encourage and incentivize quality.
 
-### Reinvest profits
-We want to truly empower the communities that bring amazing coffee to you. That’s why we reinvest 20% of our profits into farms, local businesses and schools everywhere our coffee is grown. You can see the communities grow and learn more about coffee farming on our blog.
+I am a Meisner trained actress with a passion for crafting visual stories
+
+Charlotte Christien is a Bay Area artist. She moved to the Bay just over 5 years ago from Alabama. As a small town girl, her dream were always bigger than what her peers could handle. However, an injury derailed her plans to become a world renowned chef. Serendipity would lead her to find herself entranced with the creative styles of performance. Film. Theatre. Music. Aerial dance. All would eventually become interwoven in the tapestry that is Charlotte.
+
+Early on Charlotte decided she was going to pursue a career as a chef. She grew up helping her grandmother cook weekly meals and even large holiday meals. Charlotte attended culinary school and graduated in 2012. After working in every food department at a beach resort, she moved to California in July 2013. She continued her culinary career as a pastry chef working at a French/Italian bakery. Then at a Chinese/French-Canadian fusion patisserie. Unfortunately, a back injury forced her to discontinue her culinary career.
+
+2015 brought the opportunity to dip her toe in the intensity of actor training in a five week Meisner technique intensive. Following this intensive, she decided in 2016 to continue her training in a one year conservatory program under Racheal Adler at Waterfront Playhouse in Berkeley, CA. In addition, a trial week of acrobatic classes confirmed that aerial artistry was the place to bring all of Charlotte’s creative experiences together. Acrobatic classes fueled her!
+
+During this Meisner training, Charlotte used a writing assignment to channel the frustrations of external world into a dystopian prediction of the future. This short 3-person, 2-scene play was chosen by her peers/classmates to appear in the final showcase of the graduating class. Instructor Rachael Adler compared her writing to the works of novelist Margaret Atwood. She began to wonder if storytelling of the stage could be incorporated with aerial expression.
+Following graduation from the Meisner training program, Charlotte was cast in back-to-back theatrical roles with three diverse companies in the Bay Area. African American American Shakespeare Company, Bay Area Children’s Theater, and Ubuntu Theater Project. Following these works, her desire to hone her craft led to being accepted into the 2018 Summer Training Congress at American Conservatory Theatre.
+
+In the summer of 2019, Charlotte will move behind the scenes to create and direct an aerial and creative expression show premiering in the Bay Area. The focus is the disconnect and misconceptions among the Descendants of the Diaspora, those stolen away and those who remained on the shores.
+These and more are the stories Charlotte wishes to tackle and explore with the creative collaboration of fellow artists in the area. “At this point in my training and career, I am motivated to pull the different influences of my life and creative fires together. I have a burning desire to present outside the box and challenge what is the actual box.I see many conversations being sparked and I can’t wait to hear them.”

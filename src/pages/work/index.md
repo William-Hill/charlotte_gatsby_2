@@ -1,7 +1,7 @@
 ---
 templateKey: work
 title: Resume
-theater:
+theatre:
   - company: Tri Valley Rep
     director: Titian Lish
     role: Choir

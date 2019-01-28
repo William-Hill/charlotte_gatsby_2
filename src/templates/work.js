@@ -7,7 +7,7 @@ export default class WorkPage extends React.Component {
   render() {
     const { data } = this.props
 
-    const theater = data.markdownRemark.frontmatter.theatre
+    const theatre = data.markdownRemark.frontmatter.theatre
     const film = data.markdownRemark.frontmatter.film
     const new_media = data.markdownRemark.frontmatter.new_media
     const education = data.markdownRemark.frontmatter.education
@@ -26,7 +26,7 @@ export default class WorkPage extends React.Component {
               <th>Director</th>
             </thead>
             <tbody>
-            {theater.map(credits => {
+            {theatre.map(credits => {
               return(
                 <tr className="resume">
                   <td className="resume_item">{credits.title}</td>

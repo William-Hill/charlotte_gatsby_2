@@ -1,86 +1,72 @@
 ---
-templateKey: 'work'
-path: /work
+templateKey: work
 title: Resume
-theatre:
-  - title: Dance of the Holy Ghost
-    role: Ensemble
-    company: Ubuntu Theater Project
-    director: Michael Moran
-  - title: 'Elephant & Piggie: We’re In a play'
-    role: Squirelle 3
-    company: Bay Area Children’s Theatre
-    director:  Derek Collard and Hannah Dworkin
-  - title: A Midsummer Night's Dream
-    role: Snug
-    company: African American Shakespeare Company
-    director:  Sherry Young
+theater:
+  - company: Tri Valley Rep
+    director: Titian Lish
+    role: Choir
+    title: The Hunchback of Notre Dame
 film:
-  - title: What Happens Next
-    role: Co-star
-    company: D Johnson Productions
+  - company: D Johnson Productions
     director: Danielle Johnson
-  - title: Behind Their Eyes
-    role: Lead
-    company: ILunafriq
-    director: Anwuli Okeke
-  - title: Yummy Treats
-    role: Lead
-    company:
-    director: Dominic Stewart
-new_media:
-  - title: 4 Girls
     role: Co-star
-    company: Daymare webseries
+    title: What Happens Next
+  - company: ILunafriq
+    director: Anwuli Okeke
+    role: Lead
+    title: Behind Their Eyes
+  - director: Dominic Stewart
+    role: Lead
+    title: Yummy Treats
+new_media:
+  - company: Daymare webseries
     director: John Chris Memoriya
+    role: Co-star
+    title: 4 Girls
 education:
-  - title: Musical Theatre Performance
+  - instructor: Frances Devlin &amp; Naomi Sanchez
     school: Studio A.C.T.
-    instructor: Frances Devlin &amp; Naomi Sanchez
-  - title: The Actor’s Instinct
+    title: Musical Theatre Performance
+  - instructor: George Gallagher
     school: SF Actor’s Workshop
-    instructor: George Gallagher
-  - title: Audition Technique
+    title: The Actor’s Instinct
+  - instructor: Kirk Baltz
     school: SF Actor’s Workshop
-    instructor: Kirk Baltz
-  - title: Teleprompting
+    title: Audition Technique
+  - instructor: Bob Wood &amp; Lauren Fink
     school: Voice One
-    instructor: Bob Wood &amp; Lauren Fink
-  - title: Commercial &amp; Industrial Auditioning
+    title: Teleprompting
+  - instructor: Gregg Cohen
     school: Voice One
-    instructor: Gregg Cohen
-  - title: On Camera
+    title: Commercial &amp; Industrial Auditioning
+  - instructor: Rolf Saxon
     school: Berkeley Repertory School of Theatre
-    instructor: Rolf Saxon
-  - title: Confidence on Camera
+    title: On Camera
+  - instructor: Deb Fink
     school: Waterfront Playhouse and Conservatory
-    instructor: Deb Fink
-  - title: Linklator Voice Tech.
+    title: Confidence on Camera
+  - instructor: Jenna May Cass
     school: Waterfront Playhouse and Conservatory
-    instructor: Jenna May Cass
-  - title: Meisner Conservatory
+    title: Linklator Voice Tech.
+  - instructor: Rachael Adler
     school: Waterfront Playhouse and Conservatory
-    instructor: Rachael Adler
-  - title: Alexander Movement
+    title: Meisner Conservatory
+  - instructor: Susan Pfeffer
     school: Waterfront Playhouse and Conservatory
-    instructor: Susan Pfeffer
-  - title: Vocal Training
+    title: Alexander Movement
+  - instructor: Judy Cruces
     school: Music Time Academy
-    instructor: Judy Cruces
-  - title: Intro to Acting Berkeley
+    title: Vocal Training
+  - instructor: 'Bobby August, Jr.'
     school: Repertory School of Theatre
-    instructor: Bobby August, Jr.
+    title: Intro to Acting Berkeley
 special_skills:
   - skill: 'Vocal range: Mezzo Soprano'
   - skill: Southern Accent (Northwest Alabama)
   - skill: Culinary knife skills
-  - skill: Ballroom dance (beginner cha-cha, rumba, swing, tango, waltz)
+  - skill: 'Ballroom dance (beginner cha-cha, rumba, swing, tango, waltz)'
   - skill: Aerial artistry (beginner pole technique)
   - skill: ASL (beginner/finger spelling)
-
-
-
-
 ---
 
 # Theatre

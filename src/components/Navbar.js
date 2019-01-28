@@ -1,8 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import github from '../img/github-icon.svg'
-import logo from '../img/logo.svg'
-import { FaFacebookSquare, FaTwitterSquare, FaInstagram } from 'react-icons/fa';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import brands from '@fortawesome/fontawesome-free-brands';
 
 const Navbar = class extends React.Component {
 
@@ -50,17 +49,26 @@ const Navbar = class extends React.Component {
         <Link className="navbar-item" to="/about">
           Bio
         </Link>
-        <Link className="navbar-item" to="/products">
+        <Link className="navbar-item" to="/work">
           My Work
         </Link>
-        <Link className="navbar-item" to="/contact">
+        <Link className="navbar-item" to="/portfolio">
           Portfolio
         </Link>
+        <Link className="navbar-item" to="/contact">
+          Contact
+        </Link>
       </div>
-      <div className="navbar-end has-text-centered">
-        <a href="https://twitter.com/yesCharlieyesss" className="icon"><FaFacebookSquare /></a>
-        <a href="https://www.facebook.com/officialcharlottechristien/" className="icon"><FaTwitterSquare /></a>
-        <a href="https://www.instagram.com/charlottechristien/" className="icon"><FaInstagram /></a>
+      <div className="navbar-end has-text-centered" id="social_media_icons">
+        <span class="icon is-large">
+          <a href="https://twitter.com/yesCharlieyesss" className="icon"><FontAwesomeIcon icon={['fab', 'twitter']} /></a>
+        </span>
+        <span class="icon is-large">
+          <a href="https://www.facebook.com/officialcharlottechristien/"><FontAwesomeIcon icon={['fab', 'facebook']} /></a>
+        </span>
+        <span class="icon is-large">
+          <a href="https://www.instagram.com/charlottechristien/"><FontAwesomeIcon icon={['fab', 'instagram']} /></a>
+        </span>
       </div>
       </div>
     </div>

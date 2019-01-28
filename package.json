@@ -4,6 +4,10 @@
   "version": "1.0.0",
   "author": "M.J. Hill Digital",
   "dependencies": {
+    "@axetroy/react-download": "^1.1.1",
+    "@fortawesome/fontawesome": "^1.1.8",
+    "@fortawesome/fontawesome-free-brands": "^5.0.13",
+    "@fortawesome/react-fontawesome": "0.0.20",
     "bulma": "^0.7.0",
     "gatsby": "^2.0.66",
     "gatsby-image": "^2.0.23",
@@ -28,11 +32,8 @@
     "react": "^16.2.0",
     "react-dom": "^16.4.1",
     "react-helmet": "^5.2.0",
-    "react-icons": "^3.3.0",
     "react-images": "latest",
     "react-responsive-masonry": "latest",
-    "react-photo-gallery": "latest",
-    "react-component-gallery": "latest",
     "uuid": "^3.2.1"
   },
   "keywords": [

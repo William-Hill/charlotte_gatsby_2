@@ -22,6 +22,33 @@ collections:
   - name: "pages"
     label: "Pages"
     files:
+      - file: "src/pages/work/index.md"
+        label: "Work"
+        name: "work"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Theater", name: "theater", widget: list,
+            fields: [
+              {label: "Title", name: "title", widget: "string"}, {label: "Role", name: "role", widget: "string"}, {label: "Company", name: "company", widget: "string"}, {label: "Director", name: "director", widget: "string"}
+            ]}
+          - {label: "Film", name: "film", widget: list,
+            fields: [
+              {label: "Title", name: "title", widget: "string"}, {label: "Role", name: "role", widget: "string"}, {label: "Company", name: "company", widget: "string"}, {label: "Director", name: "director", widget: "string"}
+            ]}
+          - {label: "New Media", name: "new_media", widget: list,
+            fields: [
+              {label: "Title", name: "title", widget: "string"}, {label: "Role", name: "role", widget: "string"}, {label: "Company", name: "company", widget: "string"}, {label: "Director", name: "director", widget: "string"}
+            ]}
+          - {label: "Education", name: "education", widget: list,
+            fields: [
+              {label: "Title", name: "title", widget: "string"}, {label: "School", name: "school", widget: "string"}, {label: "Instructor", name: "instructor", widget: "string"}
+            ]}
+          - {label: "Special Skills", name: "special_skills", widget: list,
+            fields: [
+              {label: "Skill", name: "skill", widget: "string"}
+            ]}
+          - {label: "Body", name: "body", widget: "markdown"}
       - file: "src/pages/about/index.md"
         label: "About"
         name: "about"

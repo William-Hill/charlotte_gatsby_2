@@ -9,11 +9,6 @@ export const AboutPageTemplate = ({ title, content, contentComponent, image }) =
 
   console.log("image:", image)
 
-  const bannerStyle = {
-      background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${ !!image.childImageSharp ? image.childImageSharp.fluid.src : image })center center`,
-      backgroundSize: "cover"
-    }
-
   return (
     <section className="hero is-fullheight">
       <div className="hero-head">

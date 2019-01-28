@@ -28,7 +28,7 @@ collections:
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
           - {label: "Title", name: "title", widget: "string"}
-          - {label: "Theater", name: "theater", widget: list,
+          - {label: "Theatre", name: "theatre", widget: list,
             fields: [
               {label: "Title", name: "title", widget: "string"}, {label: "Role", name: "role", widget: "string"}, {label: "Company", name: "company", widget: "string"}, {label: "Director", name: "director", widget: "string"}
             ]}

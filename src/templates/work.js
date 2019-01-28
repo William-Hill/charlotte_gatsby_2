@@ -1,22 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 
 export default class WorkPage extends React.Component {
   render() {
     const { data } = this.props
 
-    // console.log("data:", data)
     const theater = data.markdownRemark.frontmatter.theatre.plays
-    console.log("theater:", theater)
     const film = data.markdownRemark.frontmatter.film.movies
     const new_media = data.markdownRemark.frontmatter.new_media.movies
-    console.log("new_media:", new_media)
     const education = data.markdownRemark.frontmatter.education.courses
-    console.log("education:", education)
     const skills = data.markdownRemark.frontmatter.special_skills.skills
-    console.log("skills:", skills)
 
 
     return (

@@ -7,11 +7,11 @@ export default class WorkPage extends React.Component {
   render() {
     const { data } = this.props
 
-    const theater = data.markdownRemark.frontmatter.theatre.plays
-    const film = data.markdownRemark.frontmatter.film.movies
-    const new_media = data.markdownRemark.frontmatter.new_media.movies
-    const education = data.markdownRemark.frontmatter.education.courses
-    const skills = data.markdownRemark.frontmatter.special_skills.skills
+    const theater = data.markdownRemark.frontmatter.theatre
+    const film = data.markdownRemark.frontmatter.film
+    const new_media = data.markdownRemark.frontmatter.new_media
+    const education = data.markdownRemark.frontmatter.education
+    const skills = data.markdownRemark.frontmatter.special_skills
 
 
     return (
@@ -146,40 +146,30 @@ export const pageQuery = graphql`
       frontmatter {
         title
         film {
-          movies {
             title
             role
             company
             director
-          }
         }
         theatre {
-          plays {
             title
             role
             company
             director
-          }
         }
         new_media {
-          movies {
             title
             role
             company
             director
-          }
         }
         education {
-          courses {
             title
             school
             instructor
-          }
         }
         special_skills {
-          skills {
             skill
-          }
         }
       }
     }

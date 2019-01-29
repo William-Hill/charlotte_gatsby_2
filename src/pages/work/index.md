@@ -24,7 +24,7 @@ new_media:
     role: Co-star
     title: 4 Girls
 education:
-  - instructor: Frances Devlin &amp; Naomi Sanchez
+  - instructor: Frances Devlin & Naomi Sanchez
     school: Studio A.C.T.
     title: Musical Theatre Performance
   - instructor: George Gallagher
@@ -33,12 +33,12 @@ education:
   - instructor: Kirk Baltz
     school: SF Actor’s Workshop
     title: Audition Technique
-  - instructor: Bob Wood &amp; Lauren Fink
+  - instructor: Bob Wood & Lauren Fink
     school: Voice One
     title: Teleprompting
   - instructor: Gregg Cohen
     school: Voice One
-    title: Commercial &amp; Industrial Auditioning
+    title: Commercial & Industrial Auditioning
   - instructor: Rolf Saxon
     school: Berkeley Repertory School of Theatre
     title: On Camera

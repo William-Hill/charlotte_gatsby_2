@@ -2,14 +2,14 @@
 templateKey: work
 title: Resume
 theatre:
-  - company: Tri Valley Rep
-    director: Titian Lish
-    role: Choir
-    title: The Hunchback of Notre Dame
   - company: 'Bay Area Children’s Theatre '
     director: Khalia Davis
     role: Florence Griffith Joyner/Harriet Tubman/Ruby Bridges
     title: She Persisted
+  - company: Tri Valley Rep
+    director: Titian Lish
+    role: Choir
+    title: The Hunchback of Notre Dame
   - company: Ubuntu Theatre Project
     director: Micheal Moran
     role: Ensemble

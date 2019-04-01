@@ -79,6 +79,9 @@ education:
   - instructor: 'Adaire, Bartlett, Chapman, Herold, Hunt, Maclean, Smith, Wyath '
     school: American Conservatory of Theatre
     title: 'Summer Training Congress '
+  - instructor: Dale Albright & Bryan Munar
+    school: Theatre Bay Area
+    title: ATLAS participant 2019
 special_skills:
   - skill: 'Vocal range: Mezzo Soprano'
   - skill: Southern Accent (Northwest Alabama)

@@ -2,10 +2,26 @@
 templateKey: work
 title: Resume
 theatre:
+  - company: 'Bay Area Children’s Theatre '
+    director: Khalia Davis
+    role: Florence Griffith Joyner/Harriet Tubman/Ruby Bridges
+    title: She Persisted
   - company: Tri Valley Rep
     director: Titian Lish
     role: Choir
     title: The Hunchback of Notre Dame
+  - company: Ubuntu Theatre Project
+    director: Micheal Moran
+    role: Ensemble
+    title: Dance of the Holy Ghosts
+  - company: 'Bay Area Children’s Theatre '
+    director: Derek Collard & Hannah Dworkin
+    role: Squirrelle 3
+    title: 'Elephant & Piggie: We’re in a Play'
+  - company: African American Shakespeare Company
+    director: Sherri Young
+    role: Snug
+    title: A Midsummer Night’s Dream
 film:
   - company: D Johnson Productions
     director: Danielle Johnson
@@ -24,6 +40,12 @@ new_media:
     role: Co-star
     title: 4 Girls
 education:
+  - instructor: Dale Albright & Bryan Munar
+    school: Theatre Bay Area
+    title: ATLAS participant 2019
+  - instructor: 'Adaire, Bartlett, Chapman, Herold, Hunt, Maclean, Smith, Wyath '
+    school: American Conservatory of Theatre
+    title: 'Summer Training Congress '
   - instructor: Frances Devlin & Naomi Sanchez
     school: Studio A.C.T.
     title: Musical Theatre Performance

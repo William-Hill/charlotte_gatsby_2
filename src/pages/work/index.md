@@ -17,7 +17,7 @@ theatre:
   - company: 'Bay Area Children’s Theatre '
     director: Derek Collard & Hannah Dworkin
     role: Squirrelle 3
-    title: 'Elephant &Piggie: We’re in a Play'
+    title: 'Elephant & Piggie: We’re in a Play'
   - company: African American Shakespeare Company
     director: Sherri Young
     role: Snug

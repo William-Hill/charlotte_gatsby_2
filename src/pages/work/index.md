@@ -10,6 +10,10 @@ theatre:
     director: Khalia Davis
     role: Florence Griffith Joyner/Harriet Tubman/Ruby Bridges
     title: She Persisted
+  - company: Ubuntu Theatre Project
+    director: Micheal Moran
+    role: Ensemble
+    title: Dance of the Holy Ghosts
 film:
   - company: D Johnson Productions
     director: Danielle Johnson

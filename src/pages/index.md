@@ -1,6 +1,6 @@
 ---
-templateKey: 'index'
+templateKey: "index"
 path: /
 title: Index page
-image: /img/IMG_3642_hero.jpg
+image: /img/img_1469_retouched.jpg
 ---

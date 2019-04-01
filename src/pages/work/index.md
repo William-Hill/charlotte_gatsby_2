@@ -6,6 +6,10 @@ theatre:
     director: Titian Lish
     role: Choir
     title: The Hunchback of Notre Dame
+  - company: 'Bay Area Children’s Theatre '
+    director: Khalia Davis
+    role: Florence Griffith Joyner/Harriet Tubman/Ruby Bridges
+    title: She Persisted
 film:
   - company: D Johnson Productions
     director: Danielle Johnson

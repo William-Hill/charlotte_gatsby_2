@@ -76,6 +76,9 @@ education:
   - instructor: 'Bobby August, Jr.'
     school: Repertory School of Theatre
     title: Intro to Acting Berkeley
+  - instructor: 'Adaire, Bartlett, Chapman, Herold, Hunt, Maclean, Smith, Wyath '
+    school: American Conservatory of Theatre
+    title: 'Summer Training Congress '
 special_skills:
   - skill: 'Vocal range: Mezzo Soprano'
   - skill: Southern Accent (Northwest Alabama)

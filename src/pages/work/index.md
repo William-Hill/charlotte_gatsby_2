@@ -40,6 +40,9 @@ new_media:
     role: Co-star
     title: 4 Girls
 education:
+  - instructor: Dale Albright & Bryan Munar
+    school: Theatre Bay Area
+    title: ATLAS participant 2019
   - instructor: Frances Devlin & Naomi Sanchez
     school: Studio A.C.T.
     title: Musical Theatre Performance
@@ -79,9 +82,6 @@ education:
   - instructor: 'Adaire, Bartlett, Chapman, Herold, Hunt, Maclean, Smith, Wyath '
     school: American Conservatory of Theatre
     title: 'Summer Training Congress '
-  - instructor: Dale Albright & Bryan Munar
-    school: Theatre Bay Area
-    title: ATLAS participant 2019
 special_skills:
   - skill: 'Vocal range: Mezzo Soprano'
   - skill: Southern Accent (Northwest Alabama)

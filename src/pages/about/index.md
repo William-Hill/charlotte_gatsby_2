@@ -2,7 +2,7 @@
 templateKey: about-page
 title: About Charlotte
 ---
-I act. I sing. I model. I create.
+**I act. I sing. I model. I create.**
 
 <br>
 

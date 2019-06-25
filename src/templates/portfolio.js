@@ -1,35 +1,83 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import Img from "gatsby-image";
 import Layout from "../components/Layout";
-import Lightbox from "react-images";
-import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
+import Carousel, { Modal, ModalGateway } from "react-images";
 import { chunk, sum } from "lodash";
-import { Box } from "rebass";
+import { Box, Link } from "rebass";
 
-const Gallery = ({ images, itemsPerRow }) => {
-  // Split images into groups of the given size
-  const rows = chunk(images, itemsPerRow);
+const Gallery = ({ images, itemsPerRow: itemsPerRowByBreakpoints = [1] }) => {
+  // Sum aspect ratios of images in the given row
+  const aspectRatios = images.map(image => image.aspectRatio);
+
+  // For each breakpoint, calculate the aspect ratio sum of each row's images
+  const rowAspectRatioSumsByBreakpoints = itemsPerRowByBreakpoints.map(
+    itemsPerRow =>
+      // Split images into groups of the given size
+      chunk(aspectRatios, itemsPerRow).map(rowAspectRatios =>
+        // Sum aspect ratios of images in the given row
+        sum(rowAspectRatios)
+      )
+  );
+
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [modalCurrentIndex, setModalCurrentIndex] = useState(0);
+
+  const closeModal = () => setModalIsOpen(false);
+  const openModal = imageIndex => {
+    setModalCurrentIndex(imageIndex);
+    setModalIsOpen(true);
+  };
 
   return (
-    <div>
-      {rows.map(row => {
-        // Sum aspect ratios of images in the given row
-        const rowAspectRatioSum = sum(row.map(image => image.aspectRatio));
-
-        return row.map(image => (
+    <Box>
+      {images.map((image, i) => (
+        <Link
+          key={i}
+          href={image.src}
+          onClick={e => {
+            e.preventDefault();
+            openModal(i);
+          }}
+        >
           <Box
-            key={image.src}
             as={Img}
             fluid={image}
-            width={`${(image.aspectRatio / rowAspectRatioSum) * 100}%`}
-            css={{ display: "inline-block" }}
-            onClick={() => {
-              console.log("box clicked");
-            }}
+            width={rowAspectRatioSumsByBreakpoints.map(
+              (rowAspectRatioSums, j) => {
+                const rowIndex = Math.floor(i / itemsPerRowByBreakpoints[j]);
+                const rowAspectRatioSum = rowAspectRatioSums[rowIndex];
+
+                return `${(image.aspectRatio / rowAspectRatioSum) * 100}%`;
+              }
+            )}
+            css={`
+              display: inline-block;
+              vertical-align: middle;
+              transition: filter 0.3s;
+              :hover {
+                filter: brightness(87.5%);
+              }
+            `}
           />
-        ));
-      })}
-    </div>
+        </Link>
+      ))}
+
+      {ModalGateway && (
+        <ModalGateway>
+          {modalIsOpen && (
+            <Modal onClose={closeModal}>
+              <Carousel
+                views={images.map(({ src }) => ({
+                  source: src
+                }))}
+                currentIndex={modalCurrentIndex}
+                components={{ FooterCount: () => null }}
+              />
+            </Modal>
+          )}
+        </ModalGateway>
+      )}
+    </Box>
   );
 };
 
@@ -38,46 +86,16 @@ class GalleryComposition extends Component {
     super(props);
     const data = props.data;
     const photos = data.allFile.edges;
-    const LIGHTBOX_IMAGE_SET = [];
-    photos.map(photo => {
-      LIGHTBOX_IMAGE_SET.push({
-        src: photo.node.childImageSharp.fluid.src,
-        thumbnail: photo.node.childImageSharp.fluid.src,
-        srcSet: photo.node.childImageSharp.fluid.srcSet
-      });
-    });
     this.state = {
-      shareOpen: false,
-      anchorEl: null,
-      lightbox: false,
-      currentImage: 0,
-      photos: LIGHTBOX_IMAGE_SET,
       photos_fluid: photos
     };
-  }
-
-  gotoPrevLightboxImage() {
-    this.setState(prevState => ({ currentImage: prevState.currentImage - 1 }));
-  }
-
-  gotoNextLightboxImage() {
-    this.setState(prevState => ({ currentImage: prevState.currentImage + 1 }));
-  }
-
-  openLightbox(photo, event) {
-    event.preventDefault();
-    this.setState({ lightbox: true, currentImage: photo });
-  }
-
-  closeLightbox() {
-    this.setState({ lightbox: false, currentImage: 0 });
   }
 
   render() {
     return (
       <Layout>
         <Gallery
-          itemsPerRow={3} // This will be changed to `[2, 3]` later
+          itemsPerRow={[2, 3]} // This will be changed to `[2, 3]` later
           images={this.state.photos_fluid.map(({ node }) => ({
             ...node.childImageSharp.fluid
           }))}

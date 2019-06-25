@@ -1,103 +1,130 @@
-import React, { Component } from 'react'
-import Img from 'gatsby-image'
-import Layout from '../components/Layout'
-import Lightbox from 'react-images'
-import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry'
+import React, { Component, useState } from "react";
+import Img from "gatsby-image";
+import Layout from "../components/Layout";
+import Carousel, { Modal, ModalGateway } from "react-images";
+import { chunk, sum } from "lodash";
+import { Box, Link } from "rebass";
+
+const Gallery = ({ images, itemsPerRow: itemsPerRowByBreakpoints = [1] }) => {
+  // Sum aspect ratios of images in the given row
+  const aspectRatios = images.map(image => image.aspectRatio);
+
+  // For each breakpoint, calculate the aspect ratio sum of each row's images
+  const rowAspectRatioSumsByBreakpoints = itemsPerRowByBreakpoints.map(
+    itemsPerRow =>
+      // Split images into groups of the given size
+      chunk(aspectRatios, itemsPerRow).map(rowAspectRatios =>
+        // Sum aspect ratios of images in the given row
+        sum(rowAspectRatios)
+      )
+  );
+
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [modalCurrentIndex, setModalCurrentIndex] = useState(0);
+
+  const closeModal = () => setModalIsOpen(false);
+  const openModal = imageIndex => {
+    setModalCurrentIndex(imageIndex);
+    setModalIsOpen(true);
+  };
+
+  return (
+    <Box>
+      {images.map((image, i) => (
+        <Link
+          key={i}
+          href={image.src}
+          onClick={e => {
+            e.preventDefault();
+            openModal(i);
+          }}
+        >
+          <Box
+            as={Img}
+            fluid={image}
+            width={rowAspectRatioSumsByBreakpoints.map(
+              (rowAspectRatioSums, j) => {
+                const rowIndex = Math.floor(i / itemsPerRowByBreakpoints[j]);
+                const rowAspectRatioSum = rowAspectRatioSums[rowIndex];
+
+                return `${(image.aspectRatio / rowAspectRatioSum) * 100}%`;
+              }
+            )}
+            css={`
+              display: inline-block;
+              vertical-align: middle;
+              transition: filter 0.3s;
+              :hover {
+                filter: brightness(87.5%);
+              }
+            `}
+          />
+        </Link>
+      ))}
+
+      {ModalGateway && (
+        <ModalGateway>
+          {modalIsOpen && (
+            <Modal onClose={closeModal}>
+              <Carousel
+                views={images.map(({ src }) => ({
+                  source: src
+                }))}
+                currentIndex={modalCurrentIndex}
+                components={{ FooterCount: () => null }}
+              />
+            </Modal>
+          )}
+        </ModalGateway>
+      )}
+    </Box>
+  );
+};
 
 class GalleryComposition extends Component {
   constructor(props) {
-    super(props)
-    const data = props.data
-    const photos = data.allFile.edges
-    const LIGHTBOX_IMAGE_SET = []
-    photos.map(photo => {
-      LIGHTBOX_IMAGE_SET.push({src: photo.node.childImageSharp.fluid.src, thumbnail: photo.node.childImageSharp.fluid.src,  srcSet: photo.node.childImageSharp.fluid.srcSet })
-    })
+    super(props);
+    const data = props.data;
+    const photos = data.allFile.edges;
     this.state = {
-      shareOpen: false,
-      anchorEl: null,
-      lightbox: false,
-      currentImage: 0,
-      photos: LIGHTBOX_IMAGE_SET,
       photos_fluid: photos
-    }
-  }
-
-  gotoPrevLightboxImage() {
-    const { photo } = this.state
-    this.setState({ photo: photo - 1 })
-  }
-
-  gotoNextLightboxImage() {
-    const { photo } = this.state
-    this.setState({ photo: photo + 1 })
-  }
-
-  openLightbox(photo, event) {
-    event.preventDefault()
-    this.setState({ lightbox: true, photo })
-  }
-
-  closeLightbox() {
-    this.setState({ lightbox: false, currentImage: 0 })
+    };
   }
 
   render() {
     return (
       <Layout>
-        <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 2}}>
-          <Masonry gutter="5px">
-            {this.state.photos_fluid.map((photo, i) => {
-              return(
-                <a
-                  key={i}
-                  href={photo.node.childImageSharp.fluid.srcSet}
-                  onClick={e => this.openLightbox(i, e)}
-                >
-                  <Img fluid={photo.node.childImageSharp.fluid} />
-                </a>
-              )
-            })}
-          </Masonry>
-        </ResponsiveMasonry>
-        <Lightbox
-          backdropClosesModal
-          enableKeyboardInput
-          showImageCount
-          imageCountSeparator={'/'}
-          images={this.state.photos}
-          preloadNextImage
-          currentImage={this.state.photo}
-          isOpen={this.state.lightbox}
-          onClickPrev={() => this.gotoPrevLightboxImage()}
-          onClickNext={() => this.gotoNextLightboxImage()}
-          onClose={() => this.closeLightbox()}
+        <Gallery
+          itemsPerRow={[2, 3]} // This will be changed to `[2, 3]` later
+          images={this.state.photos_fluid.map(({ node }) => ({
+            ...node.childImageSharp.fluid
+          }))}
         />
       </Layout>
-    )
+    );
   }
 }
 
-export default GalleryComposition
+export default GalleryComposition;
 
 export const portfolioPageQuery = graphql`
-query PortfolioQuery {
-  allFile(filter: {sourceInstanceName: {eq: "charlotte"}}) {
-    edges {
-      node {
-        absolutePath
-        extension
-        size
-        dir
-        modifiedTime
-        childImageSharp {
-          fluid(maxWidth: 700) {
-            ...GatsbyImageSharpFluid
-            sizes
+  query PortfolioQuery {
+    allFile(filter: { sourceInstanceName: { eq: "charlotte" } }) {
+      edges {
+        node {
+          absolutePath
+          extension
+          size
+          dir
+          modifiedTime
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+              sizes
+            }
           }
         }
       }
     }
   }
-}
-`
+`;
